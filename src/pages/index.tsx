@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Script from "next/script";
+import { TestingMappComponent } from "@/components/TestingMappComponent";
 
 export default function Home() {
   return (
@@ -30,15 +31,26 @@ export default function Home() {
         onLoad={() => console.log("loaded")}
         onError={() => console.log("error")}
       />
+      {/* <Script
+        id="someID"
+        src="https://assets.platform.bytandym.com/custom-mapps-assets/tandym-mapps-custom-v1.js?tandym_api_key=185c732e-02f0-4b01-bd57-812d70992a62-42485d6c-c010-42a0-bbc3-bfc650acc791-1689284239728"
+        async
+        strategy="beforeInteractive"
+        onLoad={() => console.log("loaded")}
+        onError={() => console.log("error")}
+      /> */}
       <main className={styles.main}>
         <div>
           <h1>TESTING MAPPS</h1>
           <div>
             {/* Here is the mapps web component */}
-            <tandym-mapps
+            {/* <tandym-mapps
               data-tandym-widget="PDP"
               data-tandym-product-price="5620"
-            ></tandym-mapps>
+            ></tandym-mapps> */}
+
+            {/* Here is another example, using a custom component to render the mApps */}
+            <TestingMappComponent />
           </div>
         </div>
       </main>
